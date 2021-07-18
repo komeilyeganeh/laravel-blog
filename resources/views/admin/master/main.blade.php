@@ -178,13 +178,13 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="" class="nav-link">
+                  <a href="{{ route('admin.posts.create') }}" class="nav-link">
                     <i class="fa fa-circle-o nav-icon"></i>
                     <p>افزودن پست</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="" class="nav-link">
+                  <a href="{{ route('admin.posts.index') }}" class="nav-link">
                     <i class="fa fa-circle-o nav-icon"></i>
                     <p>لیست پست ها</p>
                   </a>

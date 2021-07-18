@@ -5,6 +5,9 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\PostController;
+use GuzzleHttp\Middleware;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,11 +23,14 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::prefix('blog/admin/')->name('admin.')->group(function(){
-    Route::get('/',[HomeController::class, 'index'])->name('home');
-    Route::resource('categories', CategoryController::class);
-    Route::resource('roles', RoleController::class);
-    Route::resource('users', UserController::class);
+Route::group(['middleware' => 'admin'], function(){
+    Route::prefix('blog/admin/')->name('admin.')->group(function(){
+        Route::get('/',[HomeController::class, 'index'])->name('home');
+        Route::resource('categories', CategoryController::class);
+        Route::resource('roles', RoleController::class);
+        Route::resource('users', UserController::class);
+        Route::resource('posts', PostController::class);
+    });
 });
 
 
