@@ -35,8 +35,8 @@
     <header class="py-5 bg-light border-bottom mb-4">
         <div class="container">
             <div class="text-center my-5">
-                <h1 class="fw-bolder">Welcome to Blog Home!</h1>
-                <p class="lead mb-0">A Bootstrap 5 starter layout for your next blog homepage</p>
+                <h1 class="fw-bolder">نتیجه جستجو برای عبارت "{{ $query }}"</h1>
+                
             </div>
         </div>
     </header>
@@ -64,13 +64,6 @@
                         </div>
                     @endforeach
                 </div>
-                <!-- Pagination-->
-                <nav aria-label="Pagination">
-                    <hr class="my-0" />
-                    <ul class="pagination justify-content-center my-4">
-                        {{ $posts->links() }}
-                    </ul>
-                </nav>
             </div>
             <!-- Side widgets-->
             <div class="col-lg-4">
@@ -87,7 +80,6 @@
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
-    
     <script src="{{ asset('site/scripts.js') }}"></script>
 </body>
 

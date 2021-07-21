@@ -27,13 +27,12 @@
     <div class="row">
       <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box">
-          <span class="info-box-icon bg-info elevation-1"><i class="fa fa-gear"></i></span>
+          <span class="info-box-icon bg-info elevation-1"><i class="fa fa-list"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">ترافیک Cpu</span>
+            <span class="info-box-text">پست ها</span>
             <span class="info-box-number">
-              10
-              <small>%</small>
+              {{ $posts }}
             </span>
           </div>
           <!-- /.info-box-content -->
@@ -43,11 +42,11 @@
       <!-- /.col -->
       <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box mb-3">
-          <span class="info-box-icon bg-danger elevation-1"><i class="fa fa-google-plus"></i></span>
+          <span class="info-box-icon bg-danger elevation-1"><i class="fa fa-user"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">لایک‌ها</span>
-            <span class="info-box-number">41,410</span>
+            <span class="info-box-text">کاربران</span>
+            <span class="info-box-number">{{ $users }}</span>
           </div>
           <!-- /.info-box-content -->
         </div>
@@ -60,11 +59,11 @@
 
       <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box mb-3">
-          <span class="info-box-icon bg-success elevation-1"><i class="fa fa-shopping-cart"></i></span>
+          <span class="info-box-icon bg-success elevation-1"><i class="fa fa-comment"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">فروش</span>
-            <span class="info-box-number">760</span>
+            <span class="info-box-text">نظرات</span>
+            <span class="info-box-number">{{ $comments }}</span>
           </div>
           <!-- /.info-box-content -->
         </div>
@@ -73,11 +72,11 @@
       <!-- /.col -->
       <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box mb-3">
-          <span class="info-box-icon bg-warning elevation-1"><i class="fa fa-users"></i></span>
+          <span class="info-box-icon bg-warning elevation-1"><i class="fa fa-user"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">اعضای جدید</span>
-            <span class="info-box-number">2,000</span>
+            <span class="info-box-text">نقش ها</span>
+            <span class="info-box-number">{{ $roles }}</span>
           </div>
           <!-- /.info-box-content -->
         </div>
